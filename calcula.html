@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calcula o Dobro</h1>
+    <p>Número: <input type="number" id="inNumero"> </p>
+    <p> <input type="butto" value="Calcular" id="btCalcular" onclick="calculaDobro()"></p>
+    <p id="outResposta">  </p>
+
+    <script>
+        function calculaDobro(){
+            numero = parseFloat(document.getElementById("inNumero").value);
+            resposta = document.getElementById("outResposta");
+            dobro = numero * 2;
+            resposta.textContent = "O dobro de " + numero + " é " + dobro;
+            document.getElementById("inNumero").value = "";
+            document.getElementById("btCacular").disabled = true;
+            document.getElementById("btCacular").value = "Só pode uma vez";
+            
+        }
+    </script>  
+</body>
+</html>

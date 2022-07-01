@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Restaurante</h1>
+    <p>Buffet por quilo <input type="text" id="inQuilo"></p>
+    <p>Consumo do Cliente (gr) <input type="text" id="inConsumo"></p>
+    <p><input type="button" id="btCacular" value = "Calcular preco"></p>
+    <p> <h3 id="outValor"> </h3></p>
+
+    <script>
+        function calculaPreco(){
+        var inQuilo = document.getElementById("inQuilo");
+        var inConsumo = document.getElementById("inConsumo");
+        var outValor = document.getElementById("outValor");
+
+        //obtém conteúdo dos campos de entrada
+        var quilo=inQuilo.value;
+        var consumo=inConsumo.value;
+
+        //calcula valor
+        var valor=(quilo/1000)*consumo;
+
+        //alterar o valor de elemento de saída
+        outValor.textContent="O valor a pagar é R$"+valor.toFixed(2);
+
+        }
+    
+        var btCacular = document.getElementById("btCacular");
+        btCacular.addEventListener("click", calculaPreco);
+
+    </script>
+    
+</body>
+</html>
