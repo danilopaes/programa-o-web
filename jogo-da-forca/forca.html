@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forca</title>
+</head>
+
+<body>
+    <h1><strong>Jogo da Forca Simplificado</strong></h1>
+    <p>Digite a palavra: <input placeholder="Palavra única até 15 letras" type="password" id="inPalavra" maxlength="15">
+        <input type="button" id="btRegistrar" value="Registrar palavra" onclick="registrar()">
+    </p>
+    <p id="outResposta"></p>
+    <p>Digite uma letra: <input type="text" id="inLetra" maxlength="1">
+        <input type="button" id="btTentetiva" value="Registrar Tentativa" onclick="tentativa()">
+    </p>
+    <p id="outRespostaLetra"></p>
+    <h1 id="outErro"><strong>Erros: </strong></h1>
+    <p id="outErroNum"><strong></strong></p>
+    <ul id="letraPalavra" style="list-style-type: none;"><strong>Letras da palavra:</strong>
+        <li id="outRespostaLetraCerta"></li>
+    </ul>
+    <h1 id="final"><strong></strong></h1>
+
+
+    <script src="funcoes.js">     </script>
+</body>
+
+</html>
+
